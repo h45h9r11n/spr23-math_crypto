@@ -1,6 +1,6 @@
 #include <stdio.h>
 int d, x, y;
-void extendedEuclid(int a, int b){
+int extendedEuclid(int a, int b){
     if (b == 0){
         d = a;
         x = 1;
@@ -11,11 +11,15 @@ void extendedEuclid(int a, int b){
         x = y;
         y = temp - (a/b)*y;
     }
-
+    return d;
 }
 int main(){
-    int a, b;
-    scanf_s("%d", &a, sizeof(int));
-    extendedEuclid(a,b);
-    printf("%d", d);
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    if (extendedEuclid(a,b) == c){
+        printf("%d %d", x, y);
+    } else {
+        printf("No solution");
+    }
+    return 0;
 }
