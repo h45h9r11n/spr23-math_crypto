@@ -27,7 +27,7 @@ int symbolJacobi (int a, int n){
         }
         
         a = n % a1;
-        n = a1;;
+        n = a1;
     }
     if (a == 1) return g;
     return 0;
@@ -94,6 +94,6 @@ int main(){
     } else {
         printf("No solution");
     }
-    
+   
     return 0;
 }
